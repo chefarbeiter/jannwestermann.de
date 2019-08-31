@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-image: url('bg-small.jpg');
+
+    @media only screen and (min-width: 1001px) {
+        background-image: url('bg-hd.jpg');
+    }
+
+    @media only screen and (min-width: 1921px) {
+        background-image: url('bg-4k.jpg');
+    }
+
+    @media only screen and (min-width: 3841px) {
+        background-image: url('bg-5k.jpg');
+    }
+}
