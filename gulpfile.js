@@ -6,19 +6,24 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var copy = require('copy');
+var merge = require('merge-stream');
 
 // Create CSS from SASS, concat all files, minify and write to dist/j.css
-gulp.task('css', () =>
-    gulp.src('./Styles/**/*.scss')
+gulp.task('css', function () {
+    var sassFiles = gulp.src('./Styles/*.scss')
         .pipe(sass({
             outputStyle: 'nested',
             includePaths: ['.'],
             onError: console.error.bind(console, 'Sass error:')
         }))
+        .pipe(concat('sass.css'))
+        .pipe(csso());
+    var cssFiles = gulp.src('./Styles/**/*.css').pipe(concat('core.css'));
+
+    return merge(cssFiles, sassFiles)
         .pipe(concat('j.css'))
-        .pipe(csso())
         .pipe(gulp.dest('./dist'))
-);
+});
 
 // Gulp task to minify JavaScript files
 gulp.task('js', () =>
