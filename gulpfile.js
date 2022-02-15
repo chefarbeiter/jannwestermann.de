@@ -3,7 +3,6 @@ var del = require('del');
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var sass = require('gulp-sass')(require('sass'));
-var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var copy = require('copy');
 var merge = require('merge-stream');
@@ -24,14 +23,6 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./dist'));
 });
 
-// Gulp task to minify JavaScript files
-gulp.task('js', () =>
-    gulp.src('./Scripts/**/*.js')
-        .pipe(concat('j.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist'))
-);
-
 // Minify and copy HTML-sites
 gulp.task('html', () =>
     gulp.src('./*.html')
@@ -51,4 +42,4 @@ gulp.task('images', (c) => copy('./images/*', './dist/', c));
 gulp.task('clean', () => del(['dist']));
 
 // Complete build...
-gulp.task('default', gulp.series('clean', 'css', 'js', 'html', 'images'));
+gulp.task('default', gulp.series('clean', 'css', 'html', 'images'));
