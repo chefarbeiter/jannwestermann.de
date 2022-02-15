@@ -2,7 +2,7 @@ var csso = require('gulp-csso');
 var del = require('del');
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var copy = require('copy');
@@ -12,7 +12,6 @@ var merge = require('merge-stream');
 gulp.task('css', function () {
     var sassFiles = gulp.src('./Styles/*.scss')
         .pipe(sass({
-            outputStyle: 'nested',
             includePaths: ['.'],
             onError: console.error.bind(console, 'Sass error:')
         }))
@@ -22,7 +21,7 @@ gulp.task('css', function () {
 
     return merge(cssFiles, sassFiles)
         .pipe(concat('j.css'))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist'));
 });
 
 // Gulp task to minify JavaScript files
