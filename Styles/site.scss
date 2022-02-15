@@ -80,3 +80,25 @@ body {
 .footer {
     width: 100%;
 }
+
+.attribution {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: smaller;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border-color: #de2c5c;
+    border-width: 1px;
+    border-style: solid;
+    color: gray;
+
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+}
+
+.attribution-2 {
+    bottom: 30px;
+}
