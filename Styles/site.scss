@@ -34,6 +34,15 @@ body {
         }
     }
 
+    svg {
+        width: 1em;
+        display: inline-block;
+        vertical-align: -.125em;
+        height: 1em;
+        font-size: 7em;
+        overflow: visible;
+    }
+
     p {
         font-size: 1.5rem;
         font-weight: 300;
