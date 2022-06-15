@@ -2,14 +2,14 @@
     "name": "jannwestermann.de",
     "devDependencies": {
         "copy": "^0.3.2",
-        "del": "^5.1.0",
+        "del": "^6.1.1",
         "gulp": "^4.0.2",
         "gulp-concat": "^2.6.1",
-        "gulp-csso": "^3.0.1",
+        "gulp-csso": "^4.0.1",
         "gulp-htmlmin": "^5.0.1",
         "gulp-sass": "^5.1.0",
         "gulp-uglify": "^3.0.2",
         "merge-stream": "^2.0.0",
-        "sass": "^1.49.7"
+        "sass": "^1.52.3"
     }
 }
