@@ -9,46 +9,6 @@ body {
     margin-top: 10vh;
 }
 
-.icons {
-    // Do not use complete width
-    max-width: 800px;
-
-    // Center icons
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.icon {
-    text-align: center;
-
-    a, a:visited {
-        text-decoration: none;
-        color: #de2c5c;
-    }
-
-    a:hover {
-        color: #9e9e9e;
-
-        p {
-            font-weight: bold;
-        }
-    }
-
-    svg {
-        width: 1em;
-        display: inline-block;
-        vertical-align: -.125em;
-        height: 1em;
-        font-size: 7em;
-        overflow: visible;
-    }
-
-    p {
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-}
-
 // display-1 from bootstrap
 .name {
     font-size: 6rem;
@@ -67,14 +27,9 @@ body {
 }
 
 .job {
-    font-size: 40%!important;
+    font-size: 40% !important;
     margin: 0;
-    color: #6c757d!important;
-}
-
-// Reset fonts of pure-grid
-.pure-g [class *= "pure-u"] {
-    font-family: $font-family!important;
+    color: #6c757d !important;
 }
 
 .footer {
@@ -95,10 +50,10 @@ body {
         border-style: solid;
         color: gray;
         margin: 0px 2px;
-    
+
         a {
             text-decoration: none;
             color: gray;
         }
-    }    
+    }
 }
